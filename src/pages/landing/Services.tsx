@@ -29,13 +29,13 @@ export default function Services() {
         <section id="services" className="mb-[20%]">
             <SectionBlock center={true}>Services</SectionBlock>
             <SectionTitle>What We Execute</SectionTitle>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-x-10">
+            <div className="grid grid-cols-1 lg:grid-cols-3 gap-10">
                 {
-                    services.map(({ name, description, icon: Icon }) => <div key={name} className="bg-[#111111] p-10 rounded-3xl border border-gray">
+                    services.map(({ name, description, icon: Icon }) => <div key={name} className="bg-[#111111] flex flex-col items-center md:items-start p-10 rounded-3xl border border-gray">
                         <div>
                             <Icon />
                         </div>
-                        <p className="text-2xl my-5">{name}</p>
+                        <p className="text-2xl text-center md:text-left my-5">{name}</p>
                         <p className="text-gray text-justify">{description}</p>
                     </div>)
                 }

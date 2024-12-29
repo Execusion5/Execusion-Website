@@ -2,6 +2,7 @@
 
 import { cn } from "@/lib/utils";
 import { Menu, X } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import NavItems from "./Navitems";
 
@@ -35,8 +36,9 @@ export default function Navbar() {
                         <div className="flex gap-x-5 items-center w-full text-lg py-3">
                             <div className="block md:hidden cursor-pointer" onClick={() => setMobileMenu(true)}><Menu className="text-2xl" /></div>
                             <div className="flex items-center gap-x-3">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" className="h-9 w-9"><rect width="256" height="256" fill="none"></rect><line x1="208" y1="128" x2="128" y2="208" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line><line x1="192" y1="40" x2="40" y2="192" fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="16"></line></svg>
-                                <h1 className="font-bold">shadcn/navbar</h1>
+                                <Link href="#hero">
+                                    <h1 className="font-bold">Execusion</h1>
+                                </Link>
                             </div>
                         </div>
                         <div className="hidden md:flex items-center gap-x-5">

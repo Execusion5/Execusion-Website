@@ -17,7 +17,7 @@ export default function FAQList() {
         <Accordion type="single" collapsible className="w-full">
             {
                 faqs.map((faq, index) => (
-                    <AccordionItem key={index} value={`item-${index}`} className="border border-gray mb-5 py-5 px-8 bg-[#111111] rounded-lg">
+                    <AccordionItem key={index} value={`item-${index}`} className="border border-gray mb-5 md:py-5 px-4 md:px-8 bg-[#111111] rounded-lg">
                         <AccordionTrigger className="text-xl font-bold">{faq.question}</AccordionTrigger>
                         <AccordionContent className="text-gray text-lg">{faq.answer}</AccordionContent>
                     </AccordionItem>

@@ -31,7 +31,7 @@ export default function ContactForm() {
         <form onSubmit={handleSubmit(handleContact)} className='grid grid-cols-1 lg:grid-cols-6 gap-5'>
             <div className='col-span-6'>
                 <div className='p-4 border border-gray bg-[#111111] rounded-lg flex items-center'>
-                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg flex gap-x-1'>C:\Enter\Full\Name<span>{' >>'}</span></p>
+                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg lg:flex gap-x-1 hidden'>C:\Enter\Full\Name<span>{' >>'}</span></p>
                     <input
                         type="text"
                         placeholder="John Doe"
@@ -41,9 +41,9 @@ export default function ContactForm() {
                 </div>
                 {errors.email && <Error>{errors.name?.message}</Error>}
             </div>
-            <div className='col-span-3'>
+            <div className='col-span-6 lg:col-span-3'>
                 <div className='p-4 border border-gray bg-[#111111] rounded-lg flex items-center'>
-                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg flex gap-x-1'>C:\Enter\Email<span>{' >>'}</span></p>
+                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg lg:flex gap-x-1 hidden'>C:\Enter\Email<span>{' >>'}</span></p>
                     <input
                         type="email"
                         placeholder="example@domain.com"
@@ -53,9 +53,9 @@ export default function ContactForm() {
                 </div>
                 {errors.email && <Error>{errors.email?.message}</Error>}
             </div>
-            <div className='col-span-3'>
+            <div className='col-span-6 lg:col-span-3'>
                 <div className='p-4 border border-gray bg-[#111111] rounded-lg flex items-center'>
-                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg flex gap-x-1'>C:\Enter\Phone\Number<span>{' >>'}</span></p>
+                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg lg:flex gap-x-1 hidden'>C:\Enter\Phone\Number<span>{' >>'}</span></p>
                     <input
                         type="number"
                         placeholder="01XXXXXXXXX"
@@ -65,9 +65,9 @@ export default function ContactForm() {
                 </div>
                 {errors.email && <Error>{errors.phone?.message}</Error>}
             </div>
-            <div className='col-span-6'>
+            <div className='col-span-6 lg:col-span-6'>
                 <div className='p-4 border border-gray bg-[#111111] rounded-lg flex items-center relative'>
-                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg flex gap-x-1 absolute top-4'>C:\Enter\Project\Details<span>{' >>'}</span></p>
+                    <p className='text-[#9333EA] font-black bg-black py-3 pl-5 rounded-l-md text-lg lg:flex gap-x-1 absolute top-4 hidden'>C:\Enter\Project\Details<span>{' >>'}</span></p>
                     <textarea
                         className="outline-none bg-black text-gray px-5 pt-12 py-3 w-full rounded-r-md text-lg h-40"
                         {...register('details')}
