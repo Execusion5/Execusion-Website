@@ -14,7 +14,7 @@ export default function NavItems({ links }: { links: Link[]; }) {
     const items = links.map(({ name, to }) => {
         // eslint-disable-next-line react-hooks/rules-of-hooks
         const pathname = usePathname();
-        const isActive = pathname.endsWith(to);
+        const isActive = pathname ? pathname.endsWith(to) : false;
         return <Link key={to} href={to} className={cn("text-white text-sm font-medium", { "text-black font-bold": isActive })}>{name}</Link>;
     });
 

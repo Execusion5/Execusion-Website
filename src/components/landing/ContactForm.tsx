@@ -2,19 +2,18 @@
 import { ContactFormSchema } from '@/schemas/ContactFormSchema';
 import { ContactFormData } from '@/types';
 import { zodResolver } from '@hookform/resolvers/zod';
-import { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import Error from '../ui/Error';
 import { Button } from '../ui/button';
 
 export default function ContactForm() {
-    const [formData, setFormData] = useState<ContactFormData>({
-        name: '',
-        email: '',
-        phone: '',
-        details: '',
-    });
-    const { register, handleSubmit, formState: { errors }, reset } = useForm<ContactFormData>({
+    // const [formData, setFormData] = useState<ContactFormData>({
+    //     name: '',
+    //     email: '',
+    //     phone: '',
+    //     details: '',
+    // });
+    const { register, handleSubmit, formState: { errors } } = useForm<ContactFormData>({
         resolver: zodResolver(ContactFormSchema),
         defaultValues: {
             name: '',
